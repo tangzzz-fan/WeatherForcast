@@ -15,35 +15,35 @@ public struct APIResponse<T: Codable>: Codable {
         case status
         case count
         case info
-        case infoCode
+        case infocode
     }
     
     public let result: T
     public var status: String
     public var count: String
     public var info: String
-    public var infoCode: String
+    public var infocode: String
 
     public init(result: T,
                 status: String = "",
                 count: String = "", 
                 info: String = "",
-                infoCode: String = "") {
+                infocode: String = "") {
         self.result = result
         self.status = status
         self.count = count
         self.info = info
-        self.infoCode = infoCode
+        self.infocode = infocode
     }
 
     // MARK: - Codable
     public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: APIResponse<T>.CodingKeys.self)
-        self.result = try container.decode(T.self, forKey: APIResponse<T>.CodingKeys.result)
-        self.status = try container.decode(String.self, forKey: APIResponse<T>.CodingKeys.status)
-        self.count = try container.decode(String.self, forKey: APIResponse<T>.CodingKeys.count)
-        self.info = try container.decode(String.self, forKey: APIResponse<T>.CodingKeys.info)
-        self.infoCode = try container.decode(String.self, forKey: APIResponse<T>.CodingKeys.infoCode)
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.result = try container.decode(T.self, forKey: .result)
+        self.status = try container.decode(String.self, forKey: .status)
+        self.count = try container.decode(String.self, forKey: .count)
+        self.info = try container.decode(String.self, forKey: .info)
+        self.infocode = try container.decode(String.self, forKey: .infocode)
     }
     
     public func encode(to encoder: Encoder) throws { }

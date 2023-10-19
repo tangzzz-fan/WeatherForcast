@@ -8,25 +8,41 @@
 import Foundation
 
 public protocol WeatherInfoResultProtocol {
-    var lives: [Live] { get }
-    var forecast: Forecast? { get }
+    var status: String { get }
+    var count: String { get }
+    var info: String { get }
+    var infocode: String { get }
+    var lives: [Live]? { get }
+    var forecasts: [Forecast]? { get }
+    
 }
 
-public typealias WeatherInfoResultData = APIResponse<WeatherInfoResult>
 extension WeatherInfoResult: WeatherInfoResultProtocol {}
 
 public struct WeatherInfoResult: Codable {
     enum CodingKeys: String, CodingKey {
+        case status
+        case count
+        case info
+        case infocode
         case lives
-        case forecast
+        case forecasts
     }
     
-    public var lives: [Live]
-    public var forecast: Forecast?
+    public var status: String
+    public var count: String
+    public var info: String
+    public var infocode: String
+    public var lives: [Live]?
+    public var forecasts: [Forecast]?
     
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.lives = try container.decode([Live].self, forKey: .lives)
-        self.forecast = try container.decodeIfPresent(Forecast.self, forKey: .forecast)
+        self.status = try container.decode(String.self, forKey: .status)
+        self.count = try container.decode(String.self, forKey: .count)
+        self.info = try container.decode(String.self, forKey: .info)
+        self.infocode = try container.decode(String.self, forKey: .infocode)
+        self.lives = try container.decodeIfPresent([Live].self, forKey: .lives)
+        self.forecasts = try container.decodeIfPresent([Forecast].self, forKey: .forecasts)
     }
 }

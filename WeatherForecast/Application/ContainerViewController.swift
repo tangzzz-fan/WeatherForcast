@@ -24,7 +24,7 @@ class ContainerViewController: NiblessViewController {
             resultProducer.startWithResult { result in
                 switch result {
                 case .success(let data):
-                    print("data: \(data.model.lives.count)")
+                    print("data: \(data.model.lives?.count)")
                 case .failure(let error):
                     print("error: \(error.localizedDescription)")
                 }

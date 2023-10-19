@@ -12,7 +12,7 @@ extension WFAPIClient {
     public func fetchWeatherInfo(city: Int, 
                                  resultBlock: @escaping WFAPIClientResultBlock<WeatherInfoResultProtocol>) {
         let env = self.environmentConfiguration
-        fetchData(parsedType: WeatherInfoResultData.self, endpointBlock: {
+        fetchData(parsedType: WeatherInfoResult.self, endpointBlock: {
             return DataService.city(.fetchCityWeatherInfo(env, cityCode: city,
                                                           apiKey: "25e2447718b2830737441d6e00776e42"))
         }, resultBlock: resultBlock)
