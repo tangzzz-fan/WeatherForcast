@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WForecastComponents
 
 final class AppFlowCoordinator {
 
@@ -13,11 +14,17 @@ final class AppFlowCoordinator {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        registerDependencies()
     }
 
     func start() {
         let viewController = ContainerViewController()
         navigationController.pushViewController(viewController, animated: false)
+    }
+    
+    func registerDependencies() {
+        let assembly = AppServicesAssembly()
+        applyAssembly(assembly)
     }
 }
 

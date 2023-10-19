@@ -58,6 +58,24 @@
 		18D37FB92AE12D1000965019 /* NiblessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FB42AE12D1000965019 /* NiblessTableViewCell.swift */; };
 		18D37FBA2AE12D1000965019 /* NiblessControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FB52AE12D1000965019 /* NiblessControl.swift */; };
 		18D37FBB2AE12D1000965019 /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FB62AE12D1000965019 /* NiblessViewController.swift */; };
+		18D37FBD2AE1555600965019 /* WFAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FBC2AE1555600965019 /* WFAPIClient.swift */; };
+		18D37FBF2AE1563800965019 /* EnvironmentConfigurationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FBE2AE1563800965019 /* EnvironmentConfigurationProtocol.swift */; };
+		18D37FC12AE1570300965019 /* ReactiveMoya.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D37FC02AE1570300965019 /* ReactiveMoya.xcframework */; };
+		18D37FC22AE1570300965019 /* ReactiveMoya.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18D37FC02AE1570300965019 /* ReactiveMoya.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18D37FC42AE1575300965019 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FC32AE1575300965019 /* DataService.swift */; };
+		18D37FC62AE1579000965019 /* DataService+City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FC52AE1579000965019 /* DataService+City.swift */; };
+		18D37FC82AE15AD000965019 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FC72AE15AD000965019 /* APIError.swift */; };
+		18D37FCA2AE15AEB00965019 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FC92AE15AEB00965019 /* EmptyResponse.swift */; };
+		18D37FD52AE15C2B00965019 /* WFAPIClient+City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FD42AE15C2B00965019 /* WFAPIClient+City.swift */; };
+		18D37FD92AE15CD000965019 /* URL+Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FD82AE15CD000965019 /* URL+Target.swift */; };
+		18D37FDB2AE15D1700965019 /* String+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FDA2AE15D1700965019 /* String+Error.swift */; };
+		18D37FE22AE1629B00965019 /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FE12AE1629B00965019 /* Live.swift */; };
+		18D37FE42AE162B500965019 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FE32AE162B500965019 /* Forecast.swift */; };
+		18D37FE62AE1635300965019 /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FE52AE1635300965019 /* Cast.swift */; };
+		18D37FE82AE169E600965019 /* WeatherInfoResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FE72AE169E600965019 /* WeatherInfoResultProtocol.swift */; };
+		18D37FEA2AE16D2700965019 /* AppServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FE92AE16D2700965019 /* AppServicesAssembly.swift */; };
+		18D37FEC2AE16E2200965019 /* WForecastEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FEB2AE16E2200965019 /* WForecastEnvironment.swift */; };
+		18D37FEE2AE16E5400965019 /* WForecastBaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FED2AE16E5400965019 /* WForecastBaseURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +170,34 @@
 			remoteGlobalIDString = 18D37F922AE12B8200965019;
 			remoteInfo = WForecastComponents;
 		};
+		18D37FCC2AE15BDF00965019 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18D37ECC2AE11E2E00965019 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18D37F922AE12B8200965019;
+			remoteInfo = WForecastComponents;
+		};
+		18D37FCE2AE15BEA00965019 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18D37ECC2AE11E2E00965019 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18D37F922AE12B8200965019;
+			remoteInfo = WForecastComponents;
+		};
+		18D37FD02AE15BF600965019 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18D37ECC2AE11E2E00965019 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18D37F922AE12B8200965019;
+			remoteInfo = WForecastComponents;
+		};
+		18D37FD22AE15BF600965019 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18D37ECC2AE11E2E00965019 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18D37F6B2AE1288500965019;
+			remoteInfo = WForecastModel;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -169,6 +215,7 @@
 				18D37F602AE1287200965019 /* WForecastAPIClient.framework in Embed Frameworks */,
 				18D37F1A2AE1218B00965019 /* Kingfisher.xcframework in Embed Frameworks */,
 				18D37F1C2AE1218B00965019 /* SwiftyBeaver.xcframework in Embed Frameworks */,
+				18D37FC22AE1570300965019 /* ReactiveMoya.xcframework in Embed Frameworks */,
 				18D37F402AE1285900965019 /* WForecastUI.framework in Embed Frameworks */,
 				18D37F162AE1218B00965019 /* Swinject.xcframework in Embed Frameworks */,
 				18D37F102AE1218B00965019 /* Moya.xcframework in Embed Frameworks */,
@@ -222,6 +269,23 @@
 		18D37FB42AE12D1000965019 /* NiblessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessTableViewCell.swift; sourceTree = "<group>"; };
 		18D37FB52AE12D1000965019 /* NiblessControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessControl.swift; sourceTree = "<group>"; };
 		18D37FB62AE12D1000965019 /* NiblessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessViewController.swift; sourceTree = "<group>"; };
+		18D37FBC2AE1555600965019 /* WFAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WFAPIClient.swift; sourceTree = "<group>"; };
+		18D37FBE2AE1563800965019 /* EnvironmentConfigurationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentConfigurationProtocol.swift; sourceTree = "<group>"; };
+		18D37FC02AE1570300965019 /* ReactiveMoya.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactiveMoya.xcframework; path = Carthage/Build/ReactiveMoya.xcframework; sourceTree = "<group>"; };
+		18D37FC32AE1575300965019 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		18D37FC52AE1579000965019 /* DataService+City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataService+City.swift"; sourceTree = "<group>"; };
+		18D37FC72AE15AD000965019 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		18D37FC92AE15AEB00965019 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
+		18D37FD42AE15C2B00965019 /* WFAPIClient+City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WFAPIClient+City.swift"; sourceTree = "<group>"; };
+		18D37FD82AE15CD000965019 /* URL+Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Target.swift"; sourceTree = "<group>"; };
+		18D37FDA2AE15D1700965019 /* String+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Error.swift"; sourceTree = "<group>"; };
+		18D37FE12AE1629B00965019 /* Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live.swift; sourceTree = "<group>"; };
+		18D37FE32AE162B500965019 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		18D37FE52AE1635300965019 /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
+		18D37FE72AE169E600965019 /* WeatherInfoResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoResultProtocol.swift; sourceTree = "<group>"; };
+		18D37FE92AE16D2700965019 /* AppServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServicesAssembly.swift; sourceTree = "<group>"; };
+		18D37FEB2AE16E2200965019 /* WForecastEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WForecastEnvironment.swift; sourceTree = "<group>"; };
+		18D37FED2AE16E5400965019 /* WForecastBaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WForecastBaseURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +301,7 @@
 				18D37F5F2AE1287200965019 /* WForecastAPIClient.framework in Frameworks */,
 				18D37F192AE1218B00965019 /* Kingfisher.xcframework in Frameworks */,
 				18D37F1B2AE1218B00965019 /* SwiftyBeaver.xcframework in Frameworks */,
+				18D37FC12AE1570300965019 /* ReactiveMoya.xcframework in Frameworks */,
 				18D37F3F2AE1285900965019 /* WForecastUI.framework in Frameworks */,
 				18D37F152AE1218B00965019 /* Swinject.xcframework in Frameworks */,
 				18D37F0F2AE1218B00965019 /* Moya.xcframework in Frameworks */,
@@ -368,6 +433,7 @@
 		18D37F072AE1218B00965019 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18D37FC02AE1570300965019 /* ReactiveMoya.xcframework */,
 				18D37F0A2AE1218B00965019 /* Alamofire.xcframework */,
 				18D37F0C2AE1218B00965019 /* Anchorage.xcframework */,
 				18D37F0D2AE1218B00965019 /* Kingfisher.xcframework */,
@@ -385,6 +451,7 @@
 				18D37ED72AE11E2E00965019 /* AppDelegate.swift */,
 				18D37ED92AE11E2E00965019 /* SceneDelegate.swift */,
 				18D37F1F2AE1225800965019 /* AppFlowCoordinator.swift */,
+				18D37FE92AE16D2700965019 /* AppServicesAssembly.swift */,
 				18D37F212AE1229300965019 /* ContainerViewController.swift */,
 				18D37F232AE122E100965019 /* ContainerViewModel.swift */,
 			);
@@ -423,7 +490,12 @@
 			isa = PBXGroup;
 			children = (
 				18D37F4E2AE1287200965019 /* WForecastAPIClient.h */,
+				18D37FDD2AE1603F00965019 /* Extensions */,
 				18D37F8C2AE12B2900965019 /* WFAPIClientProtocol.swift */,
+				18D37FBC2AE1555600965019 /* WFAPIClient.swift */,
+				18D37FD62AE15C6500965019 /* WFAPIClient */,
+				18D37FC32AE1575300965019 /* DataService.swift */,
+				18D37FD72AE15C7A00965019 /* DataService */,
 			);
 			path = WForecastAPIClient;
 			sourceTree = "<group>";
@@ -440,6 +512,9 @@
 			isa = PBXGroup;
 			children = (
 				18D37F6E2AE1288500965019 /* WForecastModel.h */,
+				18D37FCB2AE15B2600965019 /* RestfulAPI */,
+				18D37FE02AE160A700965019 /* Entities */,
+				18D37FE72AE169E600965019 /* WeatherInfoResultProtocol.swift */,
 			);
 			path = WForecastModel;
 			sourceTree = "<group>";
@@ -466,6 +541,10 @@
 			children = (
 				18D37F952AE12B8200965019 /* WForecastComponents.h */,
 				18D37FAE2AE12B9400965019 /* ComponentResolver.swift */,
+				18D37FEB2AE16E2200965019 /* WForecastEnvironment.swift */,
+				18D37FED2AE16E5400965019 /* WForecastBaseURL.swift */,
+				18D37FBE2AE1563800965019 /* EnvironmentConfigurationProtocol.swift */,
+				18D37FDC2AE15D2C00965019 /* Extensions */,
 			);
 			path = WForecastComponents;
 			sourceTree = "<group>";
@@ -496,6 +575,57 @@
 				18D37FB62AE12D1000965019 /* NiblessViewController.swift */,
 			);
 			path = Nibless;
+			sourceTree = "<group>";
+		};
+		18D37FCB2AE15B2600965019 /* RestfulAPI */ = {
+			isa = PBXGroup;
+			children = (
+				18D37FC72AE15AD000965019 /* APIError.swift */,
+				18D37FC92AE15AEB00965019 /* EmptyResponse.swift */,
+			);
+			path = RestfulAPI;
+			sourceTree = "<group>";
+		};
+		18D37FD62AE15C6500965019 /* WFAPIClient */ = {
+			isa = PBXGroup;
+			children = (
+				18D37FD42AE15C2B00965019 /* WFAPIClient+City.swift */,
+			);
+			path = WFAPIClient;
+			sourceTree = "<group>";
+		};
+		18D37FD72AE15C7A00965019 /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				18D37FC52AE1579000965019 /* DataService+City.swift */,
+			);
+			path = DataService;
+			sourceTree = "<group>";
+		};
+		18D37FDC2AE15D2C00965019 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18D37FDA2AE15D1700965019 /* String+Error.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18D37FDD2AE1603F00965019 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18D37FD82AE15CD000965019 /* URL+Target.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18D37FE02AE160A700965019 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				18D37FE12AE1629B00965019 /* Live.swift */,
+				18D37FE32AE162B500965019 /* Forecast.swift */,
+				18D37FE52AE1635300965019 /* Cast.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -589,6 +719,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				18D37FCF2AE15BEA00965019 /* PBXTargetDependency */,
 			);
 			name = WForecastUI;
 			productName = WForecastUI;
@@ -626,6 +757,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				18D37FD12AE15BF600965019 /* PBXTargetDependency */,
+				18D37FD32AE15BF600965019 /* PBXTargetDependency */,
 			);
 			name = WForecastAPIClient;
 			productName = WForecastAPIClient;
@@ -663,6 +796,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				18D37FCD2AE15BDF00965019 /* PBXTargetDependency */,
 			);
 			name = WForecastModel;
 			productName = WForecastModel;
@@ -760,6 +894,7 @@
 					};
 					18D37F6B2AE1288500965019 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 					18D37F722AE1288600965019 = {
 						CreatedOnToolsVersion = 15.0;
@@ -909,6 +1044,7 @@
 				18D37F222AE1229300965019 /* ContainerViewController.swift in Sources */,
 				18D37ED82AE11E2E00965019 /* AppDelegate.swift in Sources */,
 				18D37EDA2AE11E2E00965019 /* SceneDelegate.swift in Sources */,
+				18D37FEA2AE16D2700965019 /* AppServicesAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -946,7 +1082,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D37FD92AE15CD000965019 /* URL+Target.swift in Sources */,
+				18D37FC62AE1579000965019 /* DataService+City.swift in Sources */,
+				18D37FC42AE1575300965019 /* DataService.swift in Sources */,
+				18D37FBD2AE1555600965019 /* WFAPIClient.swift in Sources */,
 				18D37F8D2AE12B2900965019 /* WFAPIClientProtocol.swift in Sources */,
+				18D37FD52AE15C2B00965019 /* WFAPIClient+City.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -962,6 +1103,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D37FE82AE169E600965019 /* WeatherInfoResultProtocol.swift in Sources */,
+				18D37FCA2AE15AEB00965019 /* EmptyResponse.swift in Sources */,
+				18D37FE22AE1629B00965019 /* Live.swift in Sources */,
+				18D37FC82AE15AD000965019 /* APIError.swift in Sources */,
+				18D37FE62AE1635300965019 /* Cast.swift in Sources */,
+				18D37FE42AE162B500965019 /* Forecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -977,7 +1124,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D37FEC2AE16E2200965019 /* WForecastEnvironment.swift in Sources */,
+				18D37FBF2AE1563800965019 /* EnvironmentConfigurationProtocol.swift in Sources */,
+				18D37FDB2AE15D1700965019 /* String+Error.swift in Sources */,
 				18D37FAF2AE12B9400965019 /* ComponentResolver.swift in Sources */,
+				18D37FEE2AE16E5400965019 /* WForecastBaseURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1056,6 +1207,26 @@
 			isa = PBXTargetDependency;
 			target = 18D37F922AE12B8200965019 /* WForecastComponents */;
 			targetProxy = 18D37FA42AE12B8200965019 /* PBXContainerItemProxy */;
+		};
+		18D37FCD2AE15BDF00965019 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18D37F922AE12B8200965019 /* WForecastComponents */;
+			targetProxy = 18D37FCC2AE15BDF00965019 /* PBXContainerItemProxy */;
+		};
+		18D37FCF2AE15BEA00965019 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18D37F922AE12B8200965019 /* WForecastComponents */;
+			targetProxy = 18D37FCE2AE15BEA00965019 /* PBXContainerItemProxy */;
+		};
+		18D37FD12AE15BF600965019 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18D37F922AE12B8200965019 /* WForecastComponents */;
+			targetProxy = 18D37FD02AE15BF600965019 /* PBXContainerItemProxy */;
+		};
+		18D37FD32AE15BF600965019 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18D37F6B2AE1288500965019 /* WForecastModel */;
+			targetProxy = 18D37FD22AE15BF600965019 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1503,6 +1674,7 @@
 		18D37F822AE1288600965019 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1526,6 +1698,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1536,6 +1709,7 @@
 		18D37F832AE1288600965019 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

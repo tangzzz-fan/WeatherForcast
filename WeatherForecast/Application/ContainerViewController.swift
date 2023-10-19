@@ -6,20 +6,29 @@
 //
 
 import UIKit
+import WForecastUI
+import WForecastComponents
+import WForecastAPIClient
 
-class ContainerViewController: UIViewController {
+class ContainerViewController: NiblessViewController {
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    var apiClient: WFAPIClientProtocol {
+        return resolveComponent(WFAPIClientProtocol.self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .purple
-        self.title = "Registration"
+
+        apiClient.fetchWeatherInfo(city: 110101) { resultProducer in
+            resultProducer.startWithResult { result in
+                switch result {
+                case .success(let data):
+                    print("data: \(data.model.lives.count)")
+                case .failure(let error):
+                    print("error: \(error.localizedDescription)")
+                }
+            }
+        }
     }
 }
