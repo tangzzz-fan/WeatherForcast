@@ -1,0 +1,26 @@
+disabled_rules: # rule identifiers to exclude from running
+  - blanket_disable_command
+  - trailing_newline
+  - trailing_whitespace
+  - multiple_closures_with_trailing_closure
+  - class_delegate_protocol
+opt_in_rules:
+  - force_unwrapping
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - SmileTests
+  - SmileUI/JXSegmentedView
+  - SmileUI/SVProgressHUD
+  - SmileUI/ChatLayout
+  - SmileUITests
+  - SmileAPIClientTests
+  - SmileModelTests
+  - SmileComponentsTests
+  - SmileATAuthTests
+  - SmileOSSUtilsTests
+  - fastlane
+  - SmileUI/WaterfallLayout
+  - SmileUI/InputBarAccessoryView
+identifier_name:
+  min_length: 2
+

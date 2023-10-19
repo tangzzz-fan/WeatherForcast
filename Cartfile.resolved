@@ -1,0 +1,8 @@
+github "Alamofire/Alamofire" "5.8.0"
+github "Moya/Moya" "15.0.3"
+github "ReactiveCocoa/ReactiveSwift" "6.7.0"
+github "ReactiveX/RxSwift" "6.6.0"
+github "Rightpoint/Anchorage" "4.5.0"
+github "SwiftyBeaver/SwiftyBeaver" "1.9.6"
+github "Swinject/Swinject" "2.8.1"
+github "onevcat/Kingfisher" "7.9.1"
