@@ -151,9 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				18D37F1E2AE1224F00965019 /* Application */,
-				18D37EE02AE11E3000965019 /* Assets.xcassets */,
-				18D37EE22AE11E3000965019 /* LaunchScreen.storyboard */,
-				18D37EE52AE11E3000965019 /* Info.plist */,
+				18D37F262AE1272D00965019 /* Resources */,
 			);
 			path = WeatherForecast;
 			sourceTree = "<group>";
@@ -199,6 +197,16 @@
 				18D37F232AE122E100965019 /* ContainerViewModel.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		18D37F262AE1272D00965019 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18D37EE02AE11E3000965019 /* Assets.xcassets */,
+				18D37EE22AE11E3000965019 /* LaunchScreen.storyboard */,
+				18D37EE52AE11E3000965019 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -535,8 +543,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UKXWZ3FS84;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WeatherForecast/Info.plist;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WeatherForecast/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -564,8 +572,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UKXWZ3FS84;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WeatherForecast/Info.plist;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WeatherForecast/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
