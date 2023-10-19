@@ -18,7 +18,10 @@ final class AppFlowCoordinator {
     }
 
     func start() {
-        let viewController = ContainerViewController()
+        let dataLodaer = WeatherInfoDataLoader()
+        let viewModel = ContainerViewModel(dataLoader: dataLodaer)
+        let viewController = ContainerViewController(viewModel: viewModel)
+        viewModel.start()
         navigationController.pushViewController(viewController, animated: false)
     }
     

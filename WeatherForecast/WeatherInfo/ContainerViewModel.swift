@@ -13,7 +13,7 @@ protocol ContainerViewModelType: AnyObject {
 }
 
 protocol ContainerViewModelInput: AnyObject {
-    
+    func start()
 }
 
 protocol ContainerViewModelOutput: AnyObject {
@@ -24,7 +24,16 @@ final class ContainerViewModel: ContainerViewModelType {
     
     var input: ContainerViewModelInput { return self }
     var output: ContainerViewModelOutput { return self }
+
+    private var dataLoader: WeatherInfoDataLoader
     
+    init(dataLoader: WeatherInfoDataLoader) {
+        self.dataLoader = dataLoader
+    }
+    
+    func start() {
+        dataLoader.start()
+    }
 }
 
 extension ContainerViewModel: ContainerViewModelInput {}

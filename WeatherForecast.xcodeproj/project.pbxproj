@@ -76,6 +76,7 @@
 		18D37FEA2AE16D2700965019 /* AppServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FE92AE16D2700965019 /* AppServicesAssembly.swift */; };
 		18D37FEC2AE16E2200965019 /* WForecastEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FEB2AE16E2200965019 /* WForecastEnvironment.swift */; };
 		18D37FEE2AE16E5400965019 /* WForecastBaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FED2AE16E5400965019 /* WForecastBaseURL.swift */; };
+		18D37FF02AE1868000965019 /* WeatherInfoDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37FEF2AE1868000965019 /* WeatherInfoDataLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -286,6 +287,7 @@
 		18D37FE92AE16D2700965019 /* AppServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServicesAssembly.swift; sourceTree = "<group>"; };
 		18D37FEB2AE16E2200965019 /* WForecastEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WForecastEnvironment.swift; sourceTree = "<group>"; };
 		18D37FED2AE16E5400965019 /* WForecastBaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WForecastBaseURL.swift; sourceTree = "<group>"; };
+		18D37FEF2AE1868000965019 /* WeatherInfoDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoDataLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				18D37F1E2AE1224F00965019 /* Application */,
+				18D37FF12AE1870700965019 /* WeatherInfo */,
 				18D37F262AE1272D00965019 /* Resources */,
 			);
 			path = WeatherForecast;
@@ -452,8 +455,6 @@
 				18D37ED92AE11E2E00965019 /* SceneDelegate.swift */,
 				18D37F1F2AE1225800965019 /* AppFlowCoordinator.swift */,
 				18D37FE92AE16D2700965019 /* AppServicesAssembly.swift */,
-				18D37F212AE1229300965019 /* ContainerViewController.swift */,
-				18D37F232AE122E100965019 /* ContainerViewModel.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -626,6 +627,16 @@
 				18D37FE52AE1635300965019 /* Cast.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		18D37FF12AE1870700965019 /* WeatherInfo */ = {
+			isa = PBXGroup;
+			children = (
+				18D37F212AE1229300965019 /* ContainerViewController.swift */,
+				18D37F232AE122E100965019 /* ContainerViewModel.swift */,
+				18D37FEF2AE1868000965019 /* WeatherInfoDataLoader.swift */,
+			);
+			path = WeatherInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1045,6 +1056,7 @@
 				18D37ED82AE11E2E00965019 /* AppDelegate.swift in Sources */,
 				18D37EDA2AE11E2E00965019 /* SceneDelegate.swift in Sources */,
 				18D37FEA2AE16D2700965019 /* AppServicesAssembly.swift in Sources */,
+				18D37FF02AE1868000965019 /* WeatherInfoDataLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

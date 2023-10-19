@@ -1,30 +1,30 @@
 //
-//  ContainerViewController.swift
+//  WeatherInfoDataLoader.swift
 //  WeatherForecast
 //
 //  Created by 小苹果 on 2023/10/19.
 //
 
-import UIKit
-import WForecastUI
 import WForecastComponents
 import WForecastAPIClient
+import ReactiveSwift
 
-class ContainerViewController: NiblessViewController {
+public class WeatherInfoDataLoader {
     
     var apiClient: WFAPIClientProtocol {
         return resolveComponent(WFAPIClientProtocol.self)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .purple
-
+    func start() {
+        loadData()
+    }
+    
+    func loadData() {
         apiClient.fetchWeatherInfo(city: 110101) { resultProducer in
             resultProducer.startWithResult { result in
                 switch result {
                 case .success(let data):
-                    print("data: \(data.model.lives?.count)")
+                    print("data: \(data.model.lives?.count ?? 0)")
                 case .failure(let error):
                     print("error: \(error.localizedDescription)")
                 }
