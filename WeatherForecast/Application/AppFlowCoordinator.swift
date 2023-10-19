@@ -16,8 +16,7 @@ final class AppFlowCoordinator {
     }
 
     func start() {
-        let viewModel = ContainerViewModel()
-        let viewController = ContainerViewController(viewModel: viewModel)
+        let viewController = ContainerViewController()
         navigationController.pushViewController(viewController, animated: false)
     }
 }

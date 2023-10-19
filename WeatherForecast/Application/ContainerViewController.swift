@@ -9,10 +9,7 @@ import UIKit
 
 class ContainerViewController: UIViewController {
     
-    private var viewModel: ContainerViewModelType
-    
-    init(viewModel: ContainerViewModelType) {
-        self.viewModel = viewModel
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     
