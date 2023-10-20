@@ -7,11 +7,14 @@
 
 import UIKit
 import WForecastComponents
+import ReactiveSwift
 
-final class AppFlowCoordinator {
-
+final class AppFlowCoordinator: ParentCoordinator {
+    var childCoordinator: (Coordinator & HasRootViewController)?
+    var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-    
+    var disposables = CompositeDisposable()
+
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
         registerDependencies()
@@ -22,6 +25,21 @@ final class AppFlowCoordinator {
         let viewController = ContainerViewController(viewModel: viewModel)
         viewModel.start()
         navigationController.pushViewController(viewController, animated: false)
+
+        disposables += viewModel.output.selCitySignal
+            .observe(on: UIScheduler())
+            .observeValues {[weak self] viewModel in
+                self?.coordinateToCityDetail(viewModel)
+            }
+    }
+    
+    func coordinateToCityDetail(_ viewModel: WeatherInfoCellViewModel) {
+        let detailViewModel = WeatherDetailViewModel(viewModel)
+        let detailCoor = WeatherDetailCoordinator(navigationController, 
+                                                  viewModel: detailViewModel)
+        addChild(detailCoor)
+        detailCoor.delegate = self
+        coordinate(to: detailCoor)
     }
     
     func registerDependencies() {
@@ -30,3 +48,4 @@ final class AppFlowCoordinator {
     }
 }
 
+extension AppFlowCoordinator: ParentCoordinatorDelegate {}

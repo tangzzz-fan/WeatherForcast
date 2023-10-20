@@ -14,10 +14,12 @@ protocol ContainerViewModelType: AnyObject {
 
 protocol ContainerViewModelInput: AnyObject {
     func start()
+    func didSelect(_ city: WeatherInfoCellViewModel)
 }
 
 protocol ContainerViewModelOutput: AnyObject {
     var datasourceSignal: Signal<[WeatherInfoCellViewModel], Never> { get }
+    var selCitySignal: Signal<WeatherInfoCellViewModel, Never> { get }
 }
 
 final class ContainerViewModel: ContainerViewModelType {
@@ -27,6 +29,9 @@ final class ContainerViewModel: ContainerViewModelType {
 
     private let datasourcePipe = Signal<[WeatherInfoCellViewModel], Never>.pipe()
     public var datasourceSignal: Signal<[WeatherInfoCellViewModel], Never> { datasourcePipe.output }
+    
+    private let selCityPipe = Signal<WeatherInfoCellViewModel, Never>.pipe()
+    public var selCitySignal: Signal<WeatherInfoCellViewModel, Never> { selCityPipe.output }
     
     private let disposables = CompositeDisposable()
     private var dataLoader: WeatherInfoDataLoader
@@ -47,6 +52,10 @@ final class ContainerViewModel: ContainerViewModelType {
     
     func start() {
         dataLoader.start()
+    }
+    
+    func didSelect(_ city: WeatherInfoCellViewModel) {
+        selCityPipe.input.send(value: city)
     }
     
     deinit {

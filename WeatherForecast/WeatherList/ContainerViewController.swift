@@ -111,6 +111,7 @@ extension ContainerViewController: UITableViewDataSource {
 
 extension ContainerViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("didSelect cell in indexPath: \(indexPath)")
+        let cellViewModel = dataSource[indexPath.row]
+        viewModel.input.didSelect(cellViewModel)
     }
 }
