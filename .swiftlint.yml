@@ -8,19 +8,7 @@ opt_in_rules:
   - force_unwrapping
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
-  - SmileTests
-  - SmileUI/JXSegmentedView
-  - SmileUI/SVProgressHUD
-  - SmileUI/ChatLayout
-  - SmileUITests
-  - SmileAPIClientTests
-  - SmileModelTests
-  - SmileComponentsTests
-  - SmileATAuthTests
-  - SmileOSSUtilsTests
-  - fastlane
-  - SmileUI/WaterfallLayout
-  - SmileUI/InputBarAccessoryView
+  - WForecastUI/ProgressHUD
 identifier_name:
   min_length: 2
 

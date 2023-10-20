@@ -9,6 +9,7 @@ import WForecastComponents
 import WForecastAPIClient
 import ReactiveSwift
 import WForecastModel
+import WForecastUI
 
 public class WeatherInfoDataLoader {
     
@@ -37,7 +38,7 @@ public class WeatherInfoDataLoader {
         for cityIndex in cityIndexs {
             semaphore.wait()
             group.enter()
-            
+            ProgressHUD.animate("正在加载中...", .activityIndicator)
             apiClient.fetchWeatherInfo(city: cityIndex) { resultProducer in
                 resultProducer.startWithResult {[weak self] result in
                     defer {
@@ -59,6 +60,7 @@ public class WeatherInfoDataLoader {
         group.notify(queue: .main) {[weak self] in
             print("All requests are finished. Results: \(results)")
             self?.dataSourcePipe.input.send(value: results)
+            ProgressHUD.dismiss()
         }
     }
     
