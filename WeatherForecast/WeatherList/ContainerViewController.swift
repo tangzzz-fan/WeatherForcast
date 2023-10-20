@@ -37,17 +37,17 @@ class ContainerViewController: NiblessViewController {
         configureViewModel()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     func configureViews() {
         title = "Weather Forecast"
         view.backgroundColor = .white
-        view.addSubview(searchField)
         view.addSubview(tableView)
         
-        searchField.topAnchor == view.topAnchor + Constants.navigationBarHeight
-        searchField.horizontalAnchors == view.horizontalAnchors + Constants.spacing
-        searchField.heightAnchor == Constants.searchFieldHeight
-        
-        tableView.topAnchor == searchField.bottomAnchor + Constants.vSpacing
+        tableView.topAnchor == view.topAnchor + Constants.vSpacing
         tableView.horizontalAnchors == view.horizontalAnchors + Constants.spacing
         tableView.bottomAnchor == view.bottomAnchor
     }
@@ -62,16 +62,6 @@ class ContainerViewController: NiblessViewController {
     }
     
     // MARK: - View
-    
-    lazy var searchField: UITextField = {
-        let searchField = UITextField()
-        searchField.delegate = self
-        searchField.placeholder = " e.g Beijing"
-        searchField.layer.borderColor = UIColor.lightGray.cgColor
-        searchField.layer.borderWidth = 0.5
-        searchField.layer.cornerRadius = 10
-        return searchField
-    }()
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
