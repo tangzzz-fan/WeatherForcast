@@ -31,13 +31,13 @@ class WeatherDetailCoordinator: ParentCoordinator, HasRootViewController {
             .observe(on: UIScheduler())
             .observeValues {[weak self] _ in
                 guard let self = self else { return }
-                self.navigationController?.popViewController(animated: true)
+                self.navigationController?.dismiss(animated: true)
                 self.delegate?.didFinishChildCoordinator(self)
         }
     }
     
     func start() {
-        navigationController?.pushViewController(cityDetailViewController, animated: true)
+        navigationController?.present(cityDetailViewController, animated: true)
     }
     
     deinit {

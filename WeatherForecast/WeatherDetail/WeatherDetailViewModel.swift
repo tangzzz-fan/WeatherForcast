@@ -19,6 +19,7 @@ protocol WeatherDetailViewModelInput: AnyObject {
 
 protocol WeatherDetailViewModelOutput: AnyObject {
     var backToListSignal: Signal<Void, Never> { get }
+    var thumbnailModel: WeatherInfoCellViewModel { get }
 }
 
 class WeatherDetailViewModel: WeatherDetailViewModelType {
@@ -29,7 +30,7 @@ class WeatherDetailViewModel: WeatherDetailViewModelType {
     private let backToListPipe = Signal<Void, Never>.pipe()
     public var backToListSignal: Signal<Void, Never> { backToListPipe.output }
     
-    private var thumbnailModel: WeatherInfoCellViewModel
+    var thumbnailModel: WeatherInfoCellViewModel
     
     init(_ viewModel: WeatherInfoCellViewModel) {
         self.thumbnailModel = viewModel
